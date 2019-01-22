@@ -4,50 +4,36 @@ write your code here
 
 */
 @media print {
-    /* p::first-letter {
-        
-    } */
+    /*task1 */
     .flex-2-col {
         display: flex;
         align-items: center;
     }
     .tm-team-description-container .tm-section-title {
-        margin-top: 220px;
-        margin-left: 10px; 
-    }
-    .blocks .tm-team-description-container .tm-section-title {
-        margin-top: 0;
+        margin-top: 200px;
+        margin-left: 15px; 
     }
     body {
-        background: transparent;
-        padding-top: 0;
         width: 70%;
         margin: 0 auto;
     }
-    section:not(:first-of-type) {
-        display: none;
-    }
-    #about,
-    .tm-sidebar {
+    section:not(:first-of-type), #about, .tm-sidebar {
         display: none;
     }
     .padding-medium,
     .tm-banner {
         padding: 0;
     }
-    .tm-banner {
-        margin-top: 100px;
-    }
     .flex-item>img {
         margin-top: 20px;
         margin-left: 20px;
         width: 300px;
-        height: 180px;
+        height: 170px;
     }
-    .tm-content-box .tm-team-description-container {
-        width: 420px;
+    .tm-content-box .padding-medium {
+        width: 400px;
     }
-    .tm-team-description-container .tm-section-title {
+    .padding-medium .tm-section-title {
         margin-top: 0;
     }
     p::first-letter {
@@ -55,14 +41,14 @@ write your code here
         font-size: 30px;
     }
     p:not(.tm-banner-text) {
-        line-height: 2em;
-        text-indent: 1em;
+        line-height: 1.7em;
+        text-indent: 20px;
     }
     h2+p {
         font-style: italic;
     }
     .tm-team-description-container>.tm-section-title {
-        color: #283bec;
+        color: #1120a8;
     }
 }
 
@@ -91,10 +77,10 @@ write your code here
     }
     
     /*task5 */
-    .tm-content-box {
+    section {
         position: relative;
     }
-    .tm-content-box::before {
+    section::before {
         content: "";
         position: absolute;
         left: 0px;
