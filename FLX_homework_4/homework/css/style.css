@@ -84,12 +84,10 @@ header.main-header::before {
   border-right: 50vw solid transparent;
   z-index: 1;
 }
-
-section.top {
+div.top {
   color: #ffffff;
   font-size: 12px;
   padding: 35px;
-  
 }
 
 .lor_ips {
@@ -126,13 +124,13 @@ section.middle {
   font-size: 70px;
 }
 
-section.button-nav {
+div.button-nav {
   margin-top: 135px;
   display: flex;
   justify-content: space-around;
 }
 
-section.button-nav button {
+div.button-nav button {
   width: 160px;
   height: 40px;
   background: transparent;
@@ -142,12 +140,12 @@ section.button-nav button {
   cursor: pointer;
 }
 
-section.bottom {
+div.bottom {
   color: white;
   font-size: 12px;
 }
 
-section.bottom div.right-bottom {
+div.bottom div.right-bottom {
   float: right;
   width: 700px;
   margin-top: 90px;
@@ -164,13 +162,13 @@ main.main {
   content: '';
   position: absolute;
   color: black;
-  right: -10px;
+  right: 0px;
   top: -1px;
   border-top: 85px solid #000000;
-  border-left: 50vw solid transparent;
+  border-left: 49vw solid transparent;
   z-index: 1;
 }
-section.descript {
+div.descript {
   margin-left: 40px;
 }
 section.header-main {
@@ -229,22 +227,22 @@ section.header-main h3 {
   padding: 20px;
 }
 
-section.explorers {
+div.explorers {
   height: 175px;
   display: flex;
   justify-content: space-around;
   margin-top: 27px;
 }
-section.explorers .explore-article {
+div.explorers .explore-article {
   height: 120px;
   width: 240px;
   font-size: 12px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
-section.explorers .explore-article p {
+div.explorers .explore-article p {
   padding: 15px;
 }
-section.explorers .explore-article button {
+div.explorers .explore-article button {
   width: 85%;
   height: 25px;
   margin: 0 15px 15px 15px;
@@ -254,24 +252,24 @@ section.explorers .explore-article button {
   cursor: pointer;
 }
 
-section.letters {
+div.letters {
   height: 145px;
   background-color: #f0f0f0;
 }
-section.letters div{
+div.letters div{
   font-size: 11px;
   padding-left: 20px;
   padding-top: 35px;
 }
-section.letters form {
+div.letters form {
   margin-top: 15px;
-  margin-right: 5px;
+  margin-right: 25px;
   text-align: end;
 }
-section.letters form label {
+div.letters form label {
   font-size: 18px;
 }
-section.letters form input {
+div.letters form input {
   width: 115px;
   height: 27px;
   background: transparent;
@@ -281,7 +279,7 @@ section.letters form input {
   margin-left: 15px;
   margin-right: 5px;
 }
-section.letters form button {
+div.letters form button {
   width: 65px;
   height: 30px;
   border: none;
