@@ -62,8 +62,6 @@
   padding: 0;
 }
 body {
-  /* min-width: 900px; */
-  /* max-width: 1980px; */
   margin: 0 auto;
   font-family: 'Open Sans';
 }
@@ -88,7 +86,6 @@ header.main-header::before {
 }
 
 section.top {
-  /* position: relative; */
   color: #ffffff;
   font-size: 12px;
   padding: 35px;
@@ -96,7 +93,6 @@ section.top {
 }
 
 .lor_ips {
-  /* position: relative; */
   float: left;
   color: #ffffff;
 }
@@ -116,7 +112,6 @@ section.top {
 .login a {
   text-decoration: none;
   color: white;
-  /* padding-left: 30px; */
 }
 
 section.middle {
@@ -172,7 +167,6 @@ main.main {
   right: -10px;
   top: -1px;
   border-top: 85px solid #000000;
-  /* border-left: 775px solid transparent; */
   border-left: 50vw solid transparent;
   z-index: 1;
 }
@@ -200,6 +194,31 @@ section.header-main h3 {
 .main-content .image img {
   width: 735px;
   height: 240px;
+  position: relative;
+}
+.main-content .image::before {
+  content: "Januari'15 South France";
+  position: absolute;
+  color: white;
+  left: 17px;
+  bottom: 20px;
+  font-size: 10px;
+  z-index: 1;
+}
+.main-content .image::after {
+  content: "172 \2665";
+  position: absolute;
+  color: white;
+  right: 25px;
+  top: 20px;
+  font-size: 10px;
+  width: 45px;
+  height: 20px;
+  padding-top: 5px;
+  text-align: center;
+  border: 2px white solid;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .main-content .articles {
@@ -238,13 +257,11 @@ section.explorers .explore-article button {
 section.letters {
   height: 145px;
   background-color: #f0f0f0;
-  /* size: 12px; */
 }
 section.letters div{
   font-size: 11px;
   padding-left: 20px;
   padding-top: 35px;
-  /* padding-right: 7px; */
 }
 section.letters form {
   margin-top: 15px;
@@ -270,7 +287,6 @@ section.letters form button {
   border: none;
   background-color: #097774;
   color: #ffffff;
-  border: 1px #097774 solid;
   cursor: pointer;
   font-size: 11px;
 }
@@ -325,7 +341,6 @@ section.last-viewes .section-right button {
   border: none;
   background-color: #097774;
   color: #ffffff;
-  border: 1px #097774 solid;
   cursor: pointer;
   font-size: 11px;
 }
