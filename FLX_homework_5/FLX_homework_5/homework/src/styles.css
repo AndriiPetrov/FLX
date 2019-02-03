@@ -140,11 +140,22 @@ main {
 }
 main aside {
   width: 23%;
-
+  margin: 25px 0 2% 2%;
 }
-main aside .article1 img {
+
+main aside .article1 img,
+main aside .article2 img {
   max-width: 100%;
   display: block;
+}
+main aside .article1 .min-article,
+main aside .article2 .min-article {
+  background-color: white;
+  padding: 30px;
+}
+main aside .article1 .min-article h3,
+main aside .article2 .min-article h3{
+  margin-bottom: 20px;
 }
 
 /* Footer */
@@ -160,4 +171,17 @@ footer {
 footer p {
   margin: 20px;
   color: white;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+  .tabulation {
+    display: block;
+  }
+  main {
+    display: block;
+    clear: all;
+  }
 }
