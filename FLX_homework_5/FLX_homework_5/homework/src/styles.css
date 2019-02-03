@@ -1,0 +1,148 @@
+/*
+ * Feel free to change name of colors if you need it
+ * Feel free to add new colors if you need it
+ */
+/* :root {
+  --bg-color--dark: #0b192f;
+  --bg-color--header: #162b4d;
+  --link: #fff;
+  --link--hover: #b8b8b8;
+  --bg-footer-color: #162b4d;;
+} */
+
+body {
+  font-family: roboto;
+}
+.post-1 {
+	background: #B71757;
+}
+.post-2 {
+	background: #0D7E71;
+}
+.post-3 {
+	background: #b1660e;
+}
+.post-4 {
+	background: #d12767;
+}
+.post-5 {
+	background: #2d95bb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0b192f;
+  overflow: auto;
+  margin: 0 auto;
+  font-family: 'Roboto';
+  width: 75%;
+  min-height: 100%;
+  font-size: 1.2em;
+}
+
+/* Header */
+header {
+  background-color: #162b4d;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 115px;
+}
+header .tabulation {
+  display: none;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 400px;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Main */
+.main {
+ max-width: 73%; 
+}
+main .post-1 {
+  margin-top: 25px;
+  display: flex;
+}
+.post-2, .post-3, .post-4 {
+  display: flex;
+}
+
+main .post-1 img,
+main .post-3 img
+ {
+  display: block; 
+  max-width: 100%;
+  height: 480px;
+  width: 516px;
+  /* float: left; */
+}
+main .post-2 img,
+main .post-4 img {
+  display: block;
+  max-width: 100%;
+  height: 480px;
+  width: 524px;
+}
+
+main .post-1 .article,
+main .post-2 .article,
+main .post-3 .article,
+main .post-4 .article {
+  color: white;
+  min-height: 480px;
+  display: flex;
+}
+
+main .post-1 .article .news,
+main .post-2 .article .news,
+main .post-3 .article .news,
+main .post-4 .article .news{
+  margin: 45px;
+}
+main .post-1 .article .news h1,
+main .post-2 .article .news h1,
+main .post-3 .article .news h1,
+main .post-4 .article .news h1 {
+  font-size: 48px;
+  margin-bottom: 45px;
+}
+main .post-1 .article .date,
+main .post-2 .article .date,
+main .post-3 .article .date,
+main .post-4 .article .date {
+  font-size: 1.75em;
+  margin: 5px;
+}
+
+main .post-5 .article {
+  color: white;
+  min-height: 160px;
+  padding: 40px 40px 0 40px;
+  display: flex;
+}
+main .post-5 .article .news h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+main {
+  display: flex;
+}
+main aside {
+  width: 23%;
+
+}
+main aside .article1 img {
+  max-width: 100%;
+  display: block;
+}
