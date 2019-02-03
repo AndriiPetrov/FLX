@@ -146,3 +146,18 @@ main aside .article1 img {
   max-width: 100%;
   display: block;
 }
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 73%;
+  margin-top: 20px;
+  min-height: 100px;
+  background-color:#162b4d;
+  align-items: center;
+}
+footer p {
+  margin: 20px;
+  color: white;
+}
