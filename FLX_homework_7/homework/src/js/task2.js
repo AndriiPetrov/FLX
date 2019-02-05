@@ -2,27 +2,35 @@
 let playGame = confirm("Do you want to play a game?");
 let prize = 0;
 let prizeOnCurentAttempt = 0;
+let maxPrizeCurentAttempt = 10;
 let counter = 0
 let randomNumber;
 let range = 5;
+let previousprize;
+
+console.log(parseInt(prizeOnCurentAttempt / 4));
 
 do {
     if (!playGame) {
         alert("You did not become a millionare, but can.");
     } else {
-        if (counter === 0) {
-            randomNumber = Math.floor(Math.random() * range);
-            console.log(randomNumber);
-            for (let i = 3; i > 0; i--) {
-                if (i === 3) {
-                    prizeOnCurentAttempt = 10;
-                } else if (i === 2) {
-                    prizeOnCurentAttempt = 5;
-                } else if (i === 1) {
-                    prizeOnCurentAttempt = 2;
-                }
+        if (counter > 0) {
+            range = range * 2;
+            maxPrizeCurentAttempt = maxPrizeCurentAttempt * 3;
+            previousprize = prize;
+        }
+        randomNumber = Math.floor(Math.random() * range);
+        console.log(randomNumber);
+        for (let i = 3; i > 0; i--) {
+            if (i === 3) {
+                prizeOnCurentAttempt = maxPrizeCurentAttempt;
+            } else if (i === 2) {
+                prizeOnCurentAttempt = maxPrizeCurentAttempt / 2;
+            } else if (i === 1) {
+                prizeOnCurentAttempt = parseInt(maxPrizeCurentAttempt / 4);
+            }
 
-                let userNumber = +prompt(`
+            let userNumber = +prompt(`
                 Enter a number from 0 to ${range}
                 Attempts left: ${i}
                 Total prize: ${prize}
@@ -30,82 +38,33 @@ do {
                 Please enter your number
                 `, "");
 
-                if (userNumber === randomNumber) {
-                    switch (i) {
-                        case 3:
-                            prize += 10;
-                            break;
-                        case 2:
-                            prize += 5;
-                            break;
-                        default:
-                            prize += 2;
-                            break;
-                    }
-                    break;
+            if (userNumber === randomNumber) {
+                switch (i) {
+                    case 3:
+                        prize += prizeOnCurentAttempt;
+                        break;
+                    case 2:
+                        prize += prizeOnCurentAttempt;
+                        break;
+                    default:
+                        prize += prizeOnCurentAttempt;
+                        break;
                 }
+                break;
             }
-            counter++;
-            console.log(prize);
-            if (prize === 0) {
-                alert("Thank you for a game. Your prize is: " + prize);
-                playGame = confirm("Do you want to play again?")
-            } else {
-                alert("Congratulation! Your prize is " + prize);
-                playGame = confirm("Do you want to continue?");
-
-                if (!playGame) {
-                    alert("Thank you for a game. Your prize is: " + prize);
-                    playGame = confirm("Do you want to play again?")
-                }
-            }
+        }
+        counter++;
+        console.log(prize);
+        if (prize === previousprize) {
+            alert("Thank you for a game. Your prize is: " + prize);
+            playGame = confirm("Do you want to play again?")
         } else {
-            randomNumber = Math.floor(Math.random() * (range * 2));
-            for (let i = 3; i > 0; i--) {
-                if (i === 3) {
-                    prizeOnCurentAttempt = 10 * 3;
-                } else if (i === 2) {
-                    prizeOnCurentAttempt = 5 * 3;
-                } else if (i === 1) {
-                    prizeOnCurentAttempt = 2 * 3;
-                }
+            alert("Congratulation! Your prize is " + prize);
+            playGame = confirm("Do you want to continue?");
 
-                let userNumber = +prompt(`
-                Enter a number from 0 to 10
-                Attempts left: ${i}
-                Total prize: ${prize}
-                Possible prize on current attempt: ${prizeOnCurentAttempt}
-                Please enter your number
-                `, "");
-
-                if (userNumber === randomNumber) {
-                    switch (i) {
-                        case 3:
-                            prize += 10 * 3;
-                            break;
-                        case 2:
-                            prize += 5 * 3;
-                            break;
-                        default:
-                            prize += 2 * 3;
-                            break;
-                    }
-                    break;
-                }
-            }
-            counter++;
-            console.log(prize);
-            if (prize === 0) {
+            if (!playGame) {
                 alert("Thank you for a game. Your prize is: " + prize);
                 playGame = confirm("Do you want to play again?")
-            } else {
-                alert("Congratulation! Your prize is " + prize);
-                playGame = confirm("Do you want to continue?");
-
-                if (!playGame) {
-                    alert("Thank you for a game. Your prize is: " + prize);
-                    playGame = confirm("Do you want to play again?")
-                }
             }
         }
     }
