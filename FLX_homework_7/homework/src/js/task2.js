@@ -6,21 +6,23 @@ let maxPrizeCurentAttempt = 10;
 let counter = 0
 let randomNumber;
 let range = 5;
-let previousprize;
-
-console.log(parseInt(prizeOnCurentAttempt / 4));
+let previousprize = 0;
 
 do {
     if (!playGame) {
         alert("You did not become a millionare, but can.");
     } else {
-        if (counter > 0) {
+        if (counter === 0) {
+            range = 5;
+            maxPrizeCurentAttempt = 10;
+            prize = 0;
+            previousprize = 0;
+        } else if (counter > 0) {
             range = range * 2;
             maxPrizeCurentAttempt = maxPrizeCurentAttempt * 3;
             previousprize = prize;
         }
         randomNumber = Math.floor(Math.random() * range);
-        console.log(randomNumber);
         for (let i = 3; i > 0; i--) {
             if (i === 3) {
                 prizeOnCurentAttempt = maxPrizeCurentAttempt;
@@ -54,10 +56,10 @@ do {
             }
         }
         counter++;
-        console.log(prize);
         if (prize === previousprize) {
             alert("Thank you for a game. Your prize is: " + prize);
             playGame = confirm("Do you want to play again?")
+            counter = 0;
         } else {
             alert("Congratulation! Your prize is " + prize);
             playGame = confirm("Do you want to continue?");
@@ -65,6 +67,7 @@ do {
             if (!playGame) {
                 alert("Thank you for a game. Your prize is: " + prize);
                 playGame = confirm("Do you want to play again?")
+                counter = 0;
             }
         }
     }
