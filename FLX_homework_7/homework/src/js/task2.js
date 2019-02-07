@@ -22,7 +22,7 @@ do {
             maxPrizeCurentAttempt = maxPrizeCurentAttempt * 3;
             previousprize = prize;
         }
-        randomNumber = Math.floor(Math.random() * range);
+        randomNumber = Math.floor(Math.random() * (range + 1));
         for (let i = 3; i > 0; i--) {
             if (i === 3) {
                 prizeOnCurentAttempt = maxPrizeCurentAttempt;
