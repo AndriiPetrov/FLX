@@ -15,16 +15,10 @@ if (login === "" || login === null) {
 
     if ((login === "User" && password === "UserPass") ||
         (login === "Admin" && password === "RootPass")) {
-        // 1 variant
+
         hours < 20 ? alert("Good day, dear " + login + "!") :
             alert("Good evening, dear " + login + "!");
 
-        // 2 variant
-        // if (hours < 20) {
-        //     alert("Good day, dear " + login + "!")
-        // } else {
-        //     alert("Good evening, dear " + login + "!");
-        // }
     } else {
         alert("Wrong password");
     }
