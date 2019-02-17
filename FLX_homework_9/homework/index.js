@@ -108,7 +108,17 @@ function getAmountOfAdultPeople(data) {
 console.log(getAmountOfAdultPeople(data));
 
 // Task 6
+function getGreenAdultBananaLovers(data) {
+    let arrayNames = [];
+    for(let i = 0; i < data.length; i++){
+        if(data[i]["age"] > 18 && data[i]["favoriteFruit"] === "banana" && data[i]["eyeColor"] === "green"){
+            arrayNames = data[i]["name"];
+        }
+    }
+    return arrayNames;
+}
 
+console.log(getGreenAdultBananaLovers(data));
 
 // Task 7
 function keys(object) {
