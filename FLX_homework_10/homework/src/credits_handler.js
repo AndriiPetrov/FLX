@@ -60,11 +60,15 @@ function userCard(index) {
 }
 
 // Task 2
-function UserAccount() {
-  this.name = name;
-  this.cards = [];
-
-  this.card = function userCard() {
-    return;
+class UserAccount {
+  constructor(name) {
+    this.name = name,
+    this.cards = new Array();
   }
+}
+UserAccount.prototype.addCard = function() {
+  this.cards[this.cards.length] = userCard()
+}
+UserAccount.prototype.getCardByKey = function() {
+  this.cards[1].getCardOptions();
 }
