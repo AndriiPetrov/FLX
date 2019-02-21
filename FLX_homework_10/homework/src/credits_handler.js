@@ -13,34 +13,41 @@ function userCard(index) {
     getCardOptions: function () {
       return getCardInformation;
     },
+
     putCredits: function (credits) {
       getCardInformation.balance = getCardInformation.balance + credits;
-      getCardInformation.historyLogs[length] = {
+
+      getCardInformation.historyLogs[getCardInformation.historyLogs.length] = {
         operationType: 'Received credits',
         credits: credits,
         operationTime: Date.now
       }
     },
+
     takeCredits: function (credits) {
       if (getCardInformation.balance >= credits && getCardInformation.transactionLimit >= credits) {
         getCardInformation.balance = getCardInformation.balance - credits;
       } else {
         console.error('card balance or transactionLimit are less then credits you want to take');
       }
-      getCardInformation.historyLogs[length] = {
+
+      getCardInformation.historyLogs[getCardInformation.historyLogs.length] = {
         operationType: 'Withdrawal of credits',
         credits: credits,
         operationTime: Date.now
       }
     },
+
     setTransactionLimit: function (credits) {
       getCardInformation.transactionLimit = credits;
-      getCardInformation.historyLogs[length] = {
+
+      getCardInformation.historyLogs[getCardInformation.historyLogs.length] = {
         operationType: 'Transaction limit change',
         credits: credits,
         operationTime: Date.now
       }
     },
+    
     transferCredits: function (credits, recepientCard) {
       credits = parseInt(credits - credits * tax);
       if(getCardInformation.balance >= credits && getCardInformation.transactionLimit >= credits) {
