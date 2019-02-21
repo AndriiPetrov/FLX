@@ -20,7 +20,7 @@ function userCard(index) {
       getCardInformation.historyLogs[getCardInformation.historyLogs.length] = {
         operationType: 'Received credits',
         credits: credits,
-        operationTime: Date.now
+        operationTime: Date.now()
       }
     },
 
@@ -34,7 +34,7 @@ function userCard(index) {
       getCardInformation.historyLogs[getCardInformation.historyLogs.length] = {
         operationType: 'Withdrawal of credits',
         credits: credits,
-        operationTime: Date.now
+        operationTime: Date.now()
       }
     },
 
@@ -44,14 +44,14 @@ function userCard(index) {
       getCardInformation.historyLogs[getCardInformation.historyLogs.length] = {
         operationType: 'Transaction limit change',
         credits: credits,
-        operationTime: Date.now
+        operationTime: Date.now()
       }
     },
-    
+
     transferCredits: function (credits, recepientCard) {
       credits = parseInt(credits - credits * tax);
-      if(getCardInformation.balance >= credits && getCardInformation.transactionLimit >= credits) {
-        recepientCard.getCardInformation.balance += credits; 
+      if(this.getCardOptions().balance >= credits && this.getCardOptions().transactionLimit >= credits) {
+        recepientCard.getCardOptions().balance += credits; 
       } else {
         console.error('card balance or transactionLimit are less then credits you want to take')
       }
