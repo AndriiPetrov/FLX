@@ -1,0 +1,46 @@
+/* Your styles goes here */
+#root {
+    width: 60%;
+    border: 1px solid black;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+.plus {
+    background-color: black;
+    color: white;
+}
+div.header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#todo {
+    width: 80%;
+}
+div.header button {
+    margin-left: 10px;
+}
+hr {
+    width: 85%;
+    border-width: 2px;
+}
+div.image {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+} 
+div.image img {
+    width: 50px;
+    margin: 10px auto;
+}
+
+.append-div {
+    padding-left: 60px;
+    display: flex;
+}
+.chekboxing {
+    margin-right: 20px;
+}
